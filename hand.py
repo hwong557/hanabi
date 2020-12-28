@@ -65,6 +65,6 @@ class Hand:
     def probs(self, seen) -> None:
         for i, tile in enumerate(self.tiles):
             print(f"Tile {i}")
-            prep = tile.prob_matrix(seen).replace(0, np.nan).dropna(how='all', axis=0).dropna(how='all', axis=1)
+            prep = tile.prob_matrix(seen).replace(0, np.nan).dropna(how='all', axis=0).dropna(how='all', axis=1).replace(np.nan, 0)
             print(prep)
             print()

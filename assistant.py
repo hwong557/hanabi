@@ -12,6 +12,8 @@ seen = pd.DataFrame(
         columns=hanabi.numbers,
         )
 
+h = Hand()
+
 def add_new_sighting(info:str, seen):
     ''' info should be two characters, and contain a digit and a letter, in any order.'''
     assert len(info) == 2
